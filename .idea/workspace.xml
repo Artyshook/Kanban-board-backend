@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac623f6b-74c3-44f2-bf38-212b2fb59e74" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/ArticleForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/ArticlePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/SearchBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/images/ddl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/images/ee.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/images/photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/pages/BlogHome.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/pages/BlogItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/helpers/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/helpers/validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/PostModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/PostModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2GaWMqFTDO4R1IUZS8uCwctQLAl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/saibelm/Desktop/NewReact/newclone/blogclone/my-app/src",
+    "ts.external.directory.path": "C:\\Users\\saibelm\\Desktop\\NewReact\\newclone\\blogclone\\my-app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\src" />
+      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\backend" />
+      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\src\components" />
+      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\src" />
+      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\src\Blog\pages" />
+      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\src\Blog\components" />
+      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\backend\src\controllers" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac623f6b-74c3-44f2-bf38-212b2fb59e74" name="Changes" comment="" />
+      <created>1666627130103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666627130103</updated>
+      <workItem from="1666627131603" duration="1000" />
+      <workItem from="1666709620182" duration="12000" />
+      <workItem from="1666709649125" duration="332000" />
+      <workItem from="1666710154513" duration="1530000" />
+      <workItem from="1667409340636" duration="38743000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
