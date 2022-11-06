@@ -16,7 +16,7 @@ app.use(cors())
 const port = 3222
 
 mongoose
-    .connect('mongodb+srv://admin:admin123@cluster0.ttgwg1i.mongodb.net/blog?retryWrites=true&w=majority')
+    .connect('mongodb+srv://artyshook:Mkjbhg123@blog.6zl5uyr.mongodb.net/blog?retryWrites=true&w=majority')
     .then(() => console.log('DB OK'))
     .catch((err) => console.log('DB ERROR', err));
 

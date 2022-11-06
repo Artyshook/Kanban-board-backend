@@ -16,6 +16,7 @@ export const AddPostPage = () => {
     const [imageUrl, setImageUrl]= useState('')
     const inputFileRef = useRef<any>(null)
     const navigate = useNavigate();
+
     const handleChangeFile = async(event:any) => {
         try{
             const formData = new FormData()

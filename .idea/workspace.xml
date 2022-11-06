@@ -2,24 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac623f6b-74c3-44f2-bf38-212b2fb59e74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/ArticleForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/ArticlePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/SearchBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/images/ddl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/images/ee.avif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/images/photo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/pages/BlogHome.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/pages/BlogItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/helpers/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/helpers/validations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/models/PostModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/PostModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/PostController.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/UserController.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/controllers/authentication.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/helpers/validations.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/PostModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/UserModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/PostRoute.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/UploadRoute.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/UserRoute.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/types/express/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/swagger.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/0602d930-577a-11ed-9b1f-6f2ff4c2e26a-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/2238a190-5b88-11ed-9cc8-93170766d3db-Olx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/24887ca0-5b96-11ed-96db-5fb75af02b4d-b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/25373890-56c7-11ed-a72d-e72ea31146f1-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/776e5c60-5b86-11ed-86ad-2114b0989fc8-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/8fb86460-5b9e-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/a58dd070-5b96-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/b8d34930-5b96-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/c5e2a3a0-5b96-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/cccd1dd0-5b96-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/d3c6b990-5b9e-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/d64cbca0-56c6-11ed-a72d-e72ea31146f1-Olx.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/d6727440-5b80-11ed-86ad-2114b0989fc8-Amazon-Logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/e86ed8f0-5b85-11ed-86ad-2114b0989fc8-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/f44ee7e0-5b95-11ed-96db-5fb75af02b4d-b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/upload/fb5b08e0-5779-11ed-9b1f-6f2ff4c2e26a-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/axios.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ArticleForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ArticlePage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/SearchBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/helpers/functions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/helpers/useRefreshToken.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ddl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ee.avif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/photo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/AddPostPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/BlogHome.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/BlogItem.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Login.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/MyPostsPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Registration.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/react-app-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/reportWebVitals.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/setupTests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/tsconfig.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +101,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/saibelm/Desktop/NewReact/newclone/blogclone/my-app/src",
-    "ts.external.directory.path": "C:\\Users\\saibelm\\Desktop\\NewReact\\newclone\\blogclone\\my-app\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Artem/Documents/React/blogclone/client&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Artem\\Documents\\React\\blogclone\\server\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Artem\Documents\React\blogclone\client" />
+      <recent name="C:\Users\Artem\Documents\React\blogclone\client\src" />
+      <recent name="C:\Users\Artem\Documents\React\blogclone" />
       <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\src" />
       <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\backend" />
-      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\src\components" />
@@ -85,6 +141,13 @@
       <workItem from="1666709649125" duration="332000" />
       <workItem from="1666710154513" duration="1530000" />
       <workItem from="1667409340636" duration="38743000" />
+      <workItem from="1667738896878" duration="53000" />
+      <workItem from="1667738956297" duration="11000" />
+      <workItem from="1667738974470" duration="1001000" />
+      <workItem from="1667739994454" duration="173000" />
+      <workItem from="1667740173658" duration="56000" />
+      <workItem from="1667740233760" duration="725000" />
+      <workItem from="1667740970861" duration="5246000" />
     </task>
     <servers />
   </component>
