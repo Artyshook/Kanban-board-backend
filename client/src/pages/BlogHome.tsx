@@ -1,18 +1,14 @@
-import React, {useContext, useReducer, useState} from 'react'
-import styled from 'styled-components'
-import { SearchBar } from '../components/SearchBar'
-import { BlogItem, BlogType } from './BlogItem'
 import { ArticleForm } from '../components/ArticleForm'
+import { BlogItem, BlogType } from './BlogItem'
 import { CgAddR } from 'react-icons/cg'
-import { v1 } from 'uuid'
+import { SearchBar } from '../components/SearchBar'
 import { useLocalStorage } from '../helpers/functions'
-import axios from "../axios";
-
-
+import { v1 } from 'uuid'
+import React, { useContext, useReducer, useState } from 'react'
+import axios from '../axios'
+import styled from 'styled-components'
 
 export const BlogHome = () => {
-
-
   const [showForm, setShownForm] = useState(false)
   const [title, setTitle] = useState('')
   const [text, setText] = useState('')
@@ -21,8 +17,8 @@ export const BlogHome = () => {
   const [alertMessage, setAlertMessage] = useState(false)
   const [searchKey, setSearchKey] = useState('')
 
-  const [postsArray, setPostsArray]=useLocalStorage('posts',[] as BlogType[] )
-  axios.get('/posts').then(res=>setPostsArray(res.data))
+  const [postsArray, setPostsArray] = useLocalStorage('posts', [] as BlogType[])
+  axios.get('/posts').then(res => setPostsArray(res.data))
 
   const onAddPostHandler = () => {
     const newPost = {
@@ -52,8 +48,7 @@ export const BlogHome = () => {
 
   return (
     <Container>
-      <HeaderWrapper>
-      </HeaderWrapper>
+      <HeaderWrapper></HeaderWrapper>
       {/*<SearchBar value={searchKey} searchKey={setSearchKey} clearSearch={() => setSearchKey('')} />*/}
       {/*<button onClick={() => setShownForm(true)}>*/}
       {/*  <CgAddR size='2rem' />*/}
@@ -74,7 +69,7 @@ export const BlogHome = () => {
 
       <PostWrapper>
         {postsArray.map(post => (
-          <BlogItem post={post} />
+          <BlogItem key={post._id} post={post} />
         ))}
       </PostWrapper>
     </Container>

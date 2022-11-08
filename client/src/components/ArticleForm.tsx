@@ -1,10 +1,10 @@
-import React from 'react'
-import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
-import styled from 'styled-components'
-import Form from 'react-bootstrap/Form'
-import Select from 'react-select/base'
 import { ValueType } from 'react-select'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+import Modal from 'react-bootstrap/Modal'
+import React from 'react'
+import Select from 'react-select/base'
+import styled from 'styled-components'
 
 type AddFormPropsType = {
   setShownForm: (formShown: boolean) => void

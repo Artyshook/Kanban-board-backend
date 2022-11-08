@@ -1,14 +1,13 @@
-import React from 'react'
-import { useParams, Link } from 'react-router-dom'
 import { BlogType } from '../pages/BlogItem'
+import { Link, useParams } from 'react-router-dom'
 import { useLocalStorage } from '../helpers/functions'
-import styled from 'styled-components'
+import React from 'react'
 import cover from '../images/ddl.jpg'
-
+import styled from 'styled-components'
 
 export const ArticlePage = () => {
   const { id } = useParams()
-  const [postsArray, setPostsArray]=useLocalStorage('posts',[] as BlogType[] )
+  const [postsArray, setPostsArray] = useLocalStorage('posts', [] as BlogType[])
   const blog = postsArray?.find(post => post._id === id)
   const date = () => {
     if (blog !== undefined) {

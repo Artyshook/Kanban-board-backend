@@ -1,41 +1,38 @@
-import React, {useEffect, useState} from 'react';
-import face from "../images/photo.png";
-import {BlogType} from "./BlogItem";
-import styled from "styled-components";
-import {Chip} from "@mui/material";
-import {Link} from "react-router-dom";
-import {useLocalStorage} from "../helpers/functions";
+import { BlogType } from './BlogItem'
+import { Chip } from '@mui/material'
+import { Link } from 'react-router-dom'
+import { useLocalStorage } from '../helpers/functions'
+import React, { useEffect, useState } from 'react'
+import face from '../images/photo.png'
+import styled from 'styled-components'
 
 export const MyPostsPage = () => {
-    const [postsArray, setPostsArray]=useLocalStorage('posts',[] as BlogType[] )
-    const filteredPosts= postsArray.filter(el=>el.user[''])
-    return (
-        <Container>
-            {postsArray.map(el=>{
-                return(
-                <>
-                    <ItemWrapper src={`http://localhost:3222${el?.imageUrl}`} alt='cover'/>
-                    <H3Wrapper>{el?.title}</H3Wrapper>
-                    <H3Wrapper>{el?.text}</H3Wrapper>
-                    <H3Wrapper>{el?.user['fullName']}</H3Wrapper>
-                    {/*<H3Wrapper>{`http://localhost:3222${data?.imageUrl}`}</H3Wrapper>*/}
+  const [postsArray, setPostsArray] = useLocalStorage('posts', [] as BlogType[])
+  const filteredPosts = postsArray.filter(el => el.user[''])
+  return (
+    <Container>
+      {postsArray.map(el => {
+        return (
+          <>
+            <ItemWrapper src={`http://localhost:3222${el?.imageUrl}`} alt='cover' />
+            <H3Wrapper>{el?.title}</H3Wrapper>
+            <H3Wrapper>{el?.text}</H3Wrapper>
+            <H3Wrapper>{el?.user['fullName']}</H3Wrapper>
+            {/*<H3Wrapper>{`http://localhost:3222${data?.imageUrl}`}</H3Wrapper>*/}
 
-
-                    <FooterWrapper>
-                        <DivAuthorWrapper>
-                            <img src={face} alt='avatar' width={'30px'} height={'30px'}/>
-                            <div>
-                                {/*<p>{dates.toISOString().substring(0, 10)}</p>*/}
-                            </div>
-                        </DivAuthorWrapper>
-                        <LinkWrapper to={`/posts/${el?._id}`}>Discover ➝</LinkWrapper>
-                    </FooterWrapper>
-                </>)
-            })}
-
-        </Container>
-    )
-};
+            <FooterWrapper>
+              <DivAuthorWrapper>
+                <img src={face} alt='avatar' width={'30px'} height={'30px'} />
+                <div>{/*<p>{dates.toISOString().substring(0, 10)}</p>*/}</div>
+              </DivAuthorWrapper>
+              <LinkWrapper to={`/posts/${el?._id}`}>Discover ➝</LinkWrapper>
+            </FooterWrapper>
+          </>
+        )
+      })}
+    </Container>
+  )
+}
 
 const Container = styled.div`
   display: flex;

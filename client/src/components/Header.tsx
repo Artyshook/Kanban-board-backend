@@ -1,46 +1,55 @@
-import React, {useEffect, useState} from 'react';
-import styled from "styled-components";
-import {Link, useNavigate} from "react-router-dom";
-import Container from "@mui/material/Container";
-import {Button} from "@mui/material";
-import {useLocalStorage} from "../helpers/functions";
-
+import { Button } from '@mui/material'
+import { Link, useNavigate } from 'react-router-dom'
+import { useLocalStorage } from '../helpers/functions'
+import Container from '@mui/material/Container'
+import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 export const Header = () => {
-    const [token, setToken] = useState<any>('')
-    useEffect(()=>{
-        setToken(localStorage.getItem('token'))
-    },[])
+  const [token, setToken] = useState<any>('')
+  useEffect(() => {
+    setToken(localStorage.getItem('token'))
+  }, [])
 
-    const navigate = useNavigate();
-    const onClickHandler = () => {
-        localStorage.clear()
-        navigate("/")
-    }
+  const navigate = useNavigate()
+  const onClickHandler = () => {
+    localStorage.clear()
+    navigate('/')
+  }
 
-    return (
-        <Wrapper>
-            <Container maxWidth="lg">
-                <WrapperDisplay>
-                    <LogoWrapper><Link to={'/'}>Life is BLOG</Link></LogoWrapper>
-                    <WrapperButtons>
-                        {token  &&
-
-                            <>
-                                <ButtonStyle variant="contained"><Link to={'/'}>My Posts </Link></ButtonStyle>
-                                <ButtonStyle variant="contained"><Link to={'/new'}>Make Post </Link></ButtonStyle>
-                            </>
-                        }
-                        {token
-                            ? <LogoutButton variant="contained" color="error"
-                                            onClick={onClickHandler}>Logout</LogoutButton>
-                            : <ButtonStyle variant="contained"><Link to={'/login'}>Login </Link></ButtonStyle>}
-                    </WrapperButtons>
-                </WrapperDisplay>
-            </Container>
-        </Wrapper>
-    );
-};
+  return (
+    <Wrapper>
+      <Container maxWidth='lg'>
+        <WrapperDisplay>
+          <LogoWrapper>
+            <Link to={'/'}>Life is BLOG</Link>
+          </LogoWrapper>
+          <WrapperButtons>
+            {token && (
+              <>
+                <ButtonStyle variant='contained'>
+                  <Link to={'/'}>My Posts </Link>
+                </ButtonStyle>
+                <ButtonStyle variant='contained'>
+                  <Link to={'/new'}>Make Post </Link>
+                </ButtonStyle>
+              </>
+            )}
+            {token ? (
+              <LogoutButton variant='contained' color='error' onClick={onClickHandler}>
+                Logout
+              </LogoutButton>
+            ) : (
+              <ButtonStyle variant='contained'>
+                <Link to={'/login'}>Login </Link>
+              </ButtonStyle>
+            )}
+          </WrapperButtons>
+        </WrapperDisplay>
+      </Container>
+    </Wrapper>
+  )
+}
 
 const Wrapper = styled.div`
   background-color: #fff;
@@ -52,8 +61,7 @@ const WrapperDisplay = styled.div`
   display: flex;
   justify-content: space-between;
 `
-const WrapperButtons = styled.div`
-`
+const WrapperButtons = styled.div``
 const ButtonStyle = styled(Button)`
   && {
     margin: 10px;

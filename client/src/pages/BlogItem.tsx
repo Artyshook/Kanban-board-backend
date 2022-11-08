@@ -1,50 +1,46 @@
-import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
-import {Chip} from '@mui/material'
+import { Chip } from '@mui/material'
+import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import cover from '../images/ddl.jpg'
 import face from '../images/photo.png'
 import styled from 'styled-components'
-import cover from '../images/ddl.jpg'
 
 export type BlogType = {
-    _id: string
-    title: string
-    text: string
-    createdAt: Date
-    user: any
-    imageUrl:string
+  _id: string
+  title: string
+  text: string
+  createdAt: Date
+  user: any
+  imageUrl: string
 }
 
 export type PostType = {
-    post: BlogType
+  post: BlogType
 }
 
-
 export const BlogItem = (props: PostType) => {
-    const [data, setData] = useState<BlogType>()
-    useEffect(()=>{
-        setData(props.post)
-    },[])
-   console.log(data?.user)
-    return (
-        <Container>
-            <ItemWrapper src={`http://localhost:3222${data?.imageUrl}`} alt='cover'/>
-            <H3Wrapper>{data?.title}</H3Wrapper>
-            <H3Wrapper>{data?.text}</H3Wrapper>
-            <H3Wrapper>{data?.user['fullName']}</H3Wrapper>
-            {/*<H3Wrapper>{`http://localhost:3222${data?.imageUrl}`}</H3Wrapper>*/}
+  const [data, setData] = useState<BlogType>()
+  useEffect(() => {
+    setData(props.post)
+  }, [])
+  console.log(data?.user)
+  return (
+    <Container>
+      <ItemWrapper src={`http://localhost:3222${data?.imageUrl}`} alt='cover' />
+      <H3Wrapper>{data?.title}</H3Wrapper>
+      <H3Wrapper>{data?.text}</H3Wrapper>
+      <H3Wrapper>{data?.user['fullName']}</H3Wrapper>
+      {/*<H3Wrapper>{`http://localhost:3222${data?.imageUrl}`}</H3Wrapper>*/}
 
-
-            <FooterWrapper>
-                <DivAuthorWrapper>
-                    <img src={face} alt='avatar' width={'30px'} height={'30px'}/>
-                    <div>
-                        {/*<p>{dates.toISOString().substring(0, 10)}</p>*/}
-                    </div>
-                </DivAuthorWrapper>
-                <LinkWrapper to={`/posts/${data?._id}`}>Discover ➝</LinkWrapper>
-            </FooterWrapper>
-        </Container>
-    )
+      <FooterWrapper>
+        <DivAuthorWrapper>
+          <img src={face} alt='avatar' width={'30px'} height={'30px'} />
+          <div>{/*<p>{dates.toISOString().substring(0, 10)}</p>*/}</div>
+        </DivAuthorWrapper>
+        <LinkWrapper to={`/posts/${data?._id}`}>Discover ➝</LinkWrapper>
+      </FooterWrapper>
+    </Container>
+  )
 }
 const Container = styled.div`
   display: flex;
