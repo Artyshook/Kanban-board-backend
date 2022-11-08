@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac623f6b-74c3-44f2-bf38-212b2fb59e74" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ArticleForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ArticleForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ArticlePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ArticlePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/BaseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/BaseLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/helpers/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/functions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/helpers/useRefreshToken.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/useRefreshToken.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AddPostPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/AddPostPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/BlogHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/BlogHome.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/BlogItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/BlogItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/MyPostsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/MyPostsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Registration.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/PostController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/PostController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/UploadRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/UploadRoute.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -49,29 +37,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Artem/Documents/React/blogclone/client&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Artem\\Documents\\React\\blogclone\\client\\node_modules\\prettier&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Artem\\Documents\\React\\blogclone\\server\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Artem/Documents/React/blogclone/client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Artem\\Documents\\React\\blogclone\\client\\node_modules\\prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "C:\\Users\\Artem\\Documents\\React\\blogclone\\server\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Artem\Documents\React\blogclone\client" />
+      <recent name="C:\Users\Artem\Documents\React\blogclone\client\src\helpers" />
       <recent name="C:\Users\Artem\Documents\React\blogclone\client\src" />
       <recent name="C:\Users\Artem\Documents\React\blogclone" />
       <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\my-app\src" />
-      <recent name="C:\Users\saibelm\Desktop\NewReact\newclone\blogclone\backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Artem\Documents\React\blogclone\client" />
@@ -107,7 +97,7 @@
       <workItem from="1667905632869" duration="229000" />
       <workItem from="1667905869190" duration="446000" />
       <workItem from="1667906323814" duration="258000" />
-      <workItem from="1667906587808" duration="1428000" />
+      <workItem from="1667906587808" duration="14809000" />
     </task>
     <servers />
   </component>

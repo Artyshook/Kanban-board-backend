@@ -1,7 +1,6 @@
 import { Chip } from '@mui/material'
 import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
-import cover from '../images/ddl.jpg'
 import face from '../images/photo.png'
 import styled from 'styled-components'
 
@@ -23,7 +22,8 @@ export const BlogItem = (props: PostType) => {
   useEffect(() => {
     setData(props.post)
   }, [])
-  console.log(data?.user)
+
+  // console.log(data?.user)
   return (
     <Container>
       <ItemWrapper src={`http://localhost:3222${data?.imageUrl}`} alt='cover' />
@@ -46,6 +46,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px 30px;
+  border: 2px solid cornflowerblue;
+  border-radius: 7px;
 `
 const ItemWrapper = styled.img`
   width: 100%;

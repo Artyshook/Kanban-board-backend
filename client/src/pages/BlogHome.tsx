@@ -1,7 +1,10 @@
 import { ArticleForm } from '../components/ArticleForm'
+import { BlogContext } from './BlogContext'
 import { BlogItem, BlogType } from './BlogItem'
 import { CgAddR } from 'react-icons/cg'
+import { Grid } from '@mui/material'
 import { SearchBar } from '../components/SearchBar'
+import { SideBlock } from '../components/TagsBlock'
 import { useLocalStorage } from '../helpers/functions'
 import { v1 } from 'uuid'
 import React, { useContext, useReducer, useState } from 'react'
@@ -9,6 +12,8 @@ import axios from '../axios'
 import styled from 'styled-components'
 
 export const BlogHome = () => {
+  const logic = useContext(BlogContext)
+
   const [showForm, setShownForm] = useState(false)
   const [title, setTitle] = useState('')
   const [text, setText] = useState('')
@@ -17,8 +22,8 @@ export const BlogHome = () => {
   const [alertMessage, setAlertMessage] = useState(false)
   const [searchKey, setSearchKey] = useState('')
 
-  const [postsArray, setPostsArray] = useLocalStorage('posts', [] as BlogType[])
-  axios.get('/posts').then(res => setPostsArray(res.data))
+  // const [postsArray, setPostsArray] = useLocalStorage('posts', [] as BlogType[])
+  // axios.get('/posts').then(res => setPostsArray(res.data))
 
   const onAddPostHandler = () => {
     const newPost = {
@@ -47,7 +52,7 @@ export const BlogHome = () => {
   // }
 
   return (
-    <Container>
+    <div>
       <HeaderWrapper></HeaderWrapper>
       {/*<SearchBar value={searchKey} searchKey={setSearchKey} clearSearch={() => setSearchKey('')} />*/}
       {/*<button onClick={() => setShownForm(true)}>*/}
@@ -66,21 +71,59 @@ export const BlogHome = () => {
       {/*  setCategory={setCategory}*/}
       {/*  alert={alertMessage}*/}
       {/*/>*/}
-
-      <PostWrapper>
-        {postsArray.map(post => (
-          <BlogItem key={post._id} post={post} />
-        ))}
-      </PostWrapper>
-    </Container>
+      <Grid container spacing={4}>
+        <Grid xs={8} item>
+          <PostWrapper>
+            {logic.data.reverse().map(post => (
+              <BlogItem key={post._id} post={post} />
+            ))}
+          </PostWrapper>
+        </Grid>
+        <Grid xs={4} item>
+          <SideBlock items={['react', 'typescript', 'заметки']} isLoading={false} />
+          {/*<CommentsBlock*/}
+          {/*  items={[*/}
+          {/*    {*/}
+          {/*      user: {*/}
+          {/*        fullName: 'Вася Пупкин',*/}
+          {/*        avatarUrl: 'https://mui.com/static/images/avatar/1.jpg',*/}
+          {/*      },*/}
+          {/*      text: 'Это тестовый комментарий',*/}
+          {/*    },*/}
+          {/*    {*/}
+          {/*      user: {*/}
+          {/*        fullName: 'Иван Иванов',*/}
+          {/*        avatarUrl: 'https://mui.com/static/images/avatar/2.jpg',*/}
+          {/*      },*/}
+          {/*      text: 'When displaying three lines or more, the avatar is not aligned at the top. You should set the prop to align the avatar at the top',*/}
+          {/*    },*/}
+          {/*  ]}*/}
+          {/*  isLoading={false}*/}
+          {/*/>*/}
+        </Grid>
+      </Grid>
+    </div>
   )
 }
 
-const Container = styled.div``
+const Container = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: start;
+`
+
+const PostsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  padding-bottom: 10px;
+  //border: 2px solid green;
+`
 
 const HeaderWrapper = styled.div`
   background-color: white;
-  padding: 20px;
+  //padding: 20px;
   text-align: center;
 `
 const H2 = styled.h2`
@@ -94,7 +137,8 @@ const P = styled.p`
 const PostWrapper = styled.div`
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: 100%;
-  padding: 0 50px;
+  border-radius: 7px;
+  gap: 1rem;
 `

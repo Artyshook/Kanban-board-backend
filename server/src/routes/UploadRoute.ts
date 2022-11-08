@@ -1,25 +1,29 @@
 import multer from "multer";
 import path from "path";
-import {v1} from "uuid";
-import {Request, Response} from "express";
+import { v1 } from "uuid";
+import { Request, Response } from "express";
 
-import {Router} from "express"
-const uploadRouter = Router()
+import { Router } from "express";
+const uploadRouter = Router();
 
 const storage = multer.diskStorage({
-    destination: (req, file, callback) => {
-        callback(null, path.resolve('./upload/'))
-    },
-    filename: (req, file, callback) => {
-        callback(null, `${v1()}-${file.originalname}`);
-    }
+  destination: (req, file, callback) => {
+    callback(null, "upload");
+  },
+  filename: (req, file, callback) => {
+    callback(null, file.originalname);
+  },
 });
-const upload =multer({storage})
+const upload = multer({ storage });
 
-uploadRouter.post('/upload' ,upload.single('image'),(req:Request,res:Response)=>{
+uploadRouter.post(
+  "/upload",
+  upload.single("image"),
+  (req: Request, res: Response) => {
     res.json({
-        url:`/upload/${req.file?.originalname}`
-    })
-})
+      url: `/upload/${req.file?.originalname}`,
+    });
+  }
+);
 
-export {uploadRouter}
+export { uploadRouter };
