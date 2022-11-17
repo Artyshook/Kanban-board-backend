@@ -37,3 +37,9 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
   }
   return [storedValue, setValue] as const
 }
+
+export const changeOrder = <T>(arr: T[], start: number, end: number): T[] => {
+  const dragItem = arr[start]
+  const removeDraggedItem = arr.filter((el, index) => index !== start)
+  return [...removeDraggedItem.slice(0, end), dragItem, ...removeDraggedItem.slice(end)]
+}

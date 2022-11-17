@@ -56,7 +56,7 @@ export const Login = () => {
         Login
       </Button>
       <TextWrapper>
-        Don't have an account? <Link to={'/register'}>Register</Link>
+        Don`t have an account? <Link to={'/register'}>Register</Link>
       </TextWrapper>
       {errorMessage && (
         <TypographyWrapper color={'red'} variant='h6'>

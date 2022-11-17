@@ -22,16 +22,16 @@ export const Header = () => {
       <Container maxWidth='lg'>
         <WrapperDisplay>
           <LogoWrapper>
-            <Link to={'/'}>Life is BLOG</Link>
+            <Link to={'/'}>|||</Link>
           </LogoWrapper>
           <WrapperButtons>
             {token && (
               <>
+                {/*<ButtonStyle variant='contained'>*/}
+                {/*  <Link to={'/'}>My Posts </Link>*/}
+                {/*</ButtonStyle>*/}
                 <ButtonStyle variant='contained'>
-                  <Link to={'/'}>My Posts </Link>
-                </ButtonStyle>
-                <ButtonStyle variant='contained'>
-                  <Link to={'/new'}>Make Post </Link>
+                  <Link to={'/new'}>+ Task </Link>
                 </ButtonStyle>
               </>
             )}

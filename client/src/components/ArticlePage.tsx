@@ -1,38 +1,59 @@
+import { BlogData } from '../pages/BlogContext'
 import { BlogType } from '../pages/BlogItem'
 import { Link, useParams } from 'react-router-dom'
+import { services1 } from '../helpers/service'
+import { useAsyncComponentDidMount } from '../helpers/UseComponentDidMount'
 import { useLocalStorage } from '../helpers/functions'
-import React from 'react'
+import React, { useState } from 'react'
 import cover from '../images/ddl.jpg'
 import styled from 'styled-components'
 
 export const ArticlePage = () => {
   const { id } = useParams()
-  const [postsArray, setPostsArray] = useLocalStorage('posts', [] as BlogType[])
-  const blog = postsArray?.find(post => post._id === id)
-  const date = () => {
-    if (blog !== undefined) {
-      return new Date(blog.createdAt).toLocaleDateString('en-US')
+  // const [postsArray, setPostsArray] = useState(null as BlogData | null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null as string | null)
+  const [blogData, setBlogData] = useState(null as BlogData | null)
+  console.log(blogData)
+
+  useAsyncComponentDidMount(async () => {
+    try {
+      setLoading(true)
+      const response = await services1.blog.getOnePost(id!)
+      setError(null)
+      setBlogData(response)
+    } catch (error) {
+      setError(`fetching error`)
     }
-  }
+    setLoading(false)
+  })
+
+  // console.log(postsArray)
+  // const blog = postsArray?.find(post => post._id === id)
+  // const date = () => {
+  //   if (blog !== undefined) {
+  //     return new Date(blog.createdAt).toLocaleDateString('en-US')
+  //   }
+  // }
 
   return (
     <Container>
       <LinkWrapper to={'/'}>
         <span> &#8592;</span> <span>Go Back</span>
       </LinkWrapper>
-      {blog && (
+      {blogData && (
         <BlogWrapper>
           <Header>
-            <h1>{blog.title}</h1>
+            <h1>{blogData.title}</h1>
             <div>
-              <CategoryWrapper>
-                {/*<Chip label={blog.category} />*/}
-                <DateWrapper>Published at {date()}</DateWrapper>
-              </CategoryWrapper>
+              {/*<CategoryWrapper>*/}
+              {/*  /!*<Chip label={blog.category} />*!/*/}
+              {/*  <DateWrapper>Published at {date()}</DateWrapper>*/}
+              {/*</CategoryWrapper>*/}
             </div>
           </Header>
-          <ImgWrapper src={blog.imageUrl} alt='cover' />
-          <TextWrapper>{blog.text}</TextWrapper>
+          <ImgWrapper src={`http://localhost:3222${blogData.imageUrl}`} alt='cover' />
+          <TextWrapper>{blogData.text}</TextWrapper>
         </BlogWrapper>
       )}
     </Container>

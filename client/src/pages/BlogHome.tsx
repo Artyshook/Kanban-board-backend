@@ -1,86 +1,94 @@
-import { ArticleForm } from '../components/ArticleForm'
+import { BlogContext } from './BlogContext'
 import { BlogItem, BlogType } from './BlogItem'
-import { CgAddR } from 'react-icons/cg'
-import { SearchBar } from '../components/SearchBar'
-import { useLocalStorage } from '../helpers/functions'
-import { v1 } from 'uuid'
+import { DragDropContext, Draggable, DropResult, Droppable } from 'react-beautiful-dnd'
+import { Grid } from '@mui/material'
+import { changeOrder, useLocalStorage } from '../helpers/functions'
 import React, { useContext, useReducer, useState } from 'react'
-import axios from '../axios'
 import styled from 'styled-components'
 
 export const BlogHome = () => {
-  const [showForm, setShownForm] = useState(false)
-  const [title, setTitle] = useState('')
-  const [text, setText] = useState('')
-  const [category, setCategory] = useState('')
-  // const [posts, setPosts] = useLocalStorage('blog', [] as BlogType[])
-  const [alertMessage, setAlertMessage] = useState(false)
-  const [searchKey, setSearchKey] = useState('')
-
-  const [postsArray, setPostsArray] = useLocalStorage('posts', [] as BlogType[])
-  axios.get('/posts').then(res => setPostsArray(res.data))
-
-  const onAddPostHandler = () => {
-    const newPost = {
-      id: v1(),
-      category,
-      title,
-      text,
-      createdAt: new Date(),
-    }
-    if (title && text && category) {
-      // setPosts([newPost, ...posts])
-      setShownForm(false)
-      setAlertMessage(false)
-      setTitle('')
-      setText('')
-      setCategory('')
-    } else {
-      setAlertMessage(true)
-    }
-  }
-
-  // const filterPosts = () => {
-  //   if (searchKey) {
-  //     return posts.filter(el => el.title.includes(searchKey))
-  //   } else return posts
+  const logic = useContext(BlogContext)
+  // const onDragEndHandler = (result: DropResult) => {
+  //   if (!result.destination) return
+  //   changeOrder(result.source.index, result.destination.index))
   // }
 
-  return (
-    <Container>
-      <HeaderWrapper></HeaderWrapper>
-      {/*<SearchBar value={searchKey} searchKey={setSearchKey} clearSearch={() => setSearchKey('')} />*/}
-      {/*<button onClick={() => setShownForm(true)}>*/}
-      {/*  <CgAddR size='2rem' />*/}
-      {/*  <div>Add article</div>*/}
-      {/*</button>*/}
-      {/*<ArticleForm*/}
-      {/*  setShownForm={setShownForm}*/}
-      {/*  show={showForm}*/}
-      {/*  setTitle={setTitle}*/}
-      {/*  title={title}*/}
-      {/*  setText={setText}*/}
-      {/*  text={text}*/}
-      {/*  addPost={onAddPostHandler}*/}
-      {/*  category={category}*/}
-      {/*  setCategory={setCategory}*/}
-      {/*  alert={alertMessage}*/}
-      {/*/>*/}
+  const onDragEndHandler = (result: DropResult) => {
+    if (!result.destination) return
+    let change = changeOrder([...logic.data], result.source.index, result.destination.index)
+    logic.setData(change)
+    // logic.setData(changeOrder)
+  }
 
-      <PostWrapper>
-        {postsArray.map(post => (
-          <BlogItem key={post._id} post={post} />
-        ))}
-      </PostWrapper>
-    </Container>
+  return (
+    <div>
+      <HeaderWrapper></HeaderWrapper>
+      <Grid container spacing={4}>
+        {/*<Grid xs={3} item>*/}
+        {/*  <PostWrapper>*/}
+        {/*    <div>Todo</div>*/}
+        {/*    {logic.data.reverse().map(post => (*/}
+        {/*      <BlogItem key={post._id} post={post} />*/}
+        {/*    ))}*/}
+        {/*  </PostWrapper>*/}
+        {/*</Grid>*/}
+        <Grid xs={3} item>
+          <div>
+            <div>Todo</div>
+            <DragDropContext onDragEnd={onDragEndHandler}>
+              <Droppable droppableId='post'>
+                {provided => (
+                  <ul {...provided.droppableProps} ref={provided.innerRef}>
+                    {logic.data.map((post, index) => (
+                      <Draggable key={post._id} draggableId={post._id} index={index}>
+                        {(provided, snapshot) => (
+                          <li
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                          >
+                            <BlogItem key={post._id} post={post} />
+                          </li>
+                        )}
+                      </Draggable>
+                    ))}
+                    {provided.placeholder}
+                  </ul>
+                )}
+              </Droppable>
+            </DragDropContext>
+          </div>
+
+          {/*<PostWrapper>*/}
+          {/*  <div>Completed</div>*/}
+          {/*  {logic.completed.map(post => (*/}
+          {/*    <BlogItem key={post._id} post={post} />*/}
+          {/*  ))}*/}
+          {/*</PostWrapper>*/}
+        </Grid>
+      </Grid>
+    </div>
   )
 }
 
-const Container = styled.div``
+const Container = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: start;
+`
+
+const PostsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  padding-bottom: 10px;
+  //border: 2px solid green;
+`
 
 const HeaderWrapper = styled.div`
   background-color: white;
-  padding: 20px;
+  //padding: 20px;
   text-align: center;
 `
 const H2 = styled.h2`
@@ -94,7 +102,14 @@ const P = styled.p`
 const PostWrapper = styled.div`
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: 100%;
-  padding: 0 50px;
+  border-radius: 7px;
+  gap: 1rem;
+`
+const MapTodosWrapper = styled.span`
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 `
