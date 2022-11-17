@@ -26,19 +26,19 @@ export const BlogItem = (props: PostType) => {
   // console.log(data?.user)
   return (
     <Container>
-      <ItemWrapper src={`http://localhost:3222${data?.imageUrl}`} alt='cover' />
+      {/*<ItemWrapper src={`http://localhost:3222${data?.imageUrl}`} alt='cover' />*/}
       <H3Wrapper>{data?.title}</H3Wrapper>
       <H3Wrapper>{data?.text}</H3Wrapper>
       <H3Wrapper>{data?.user['fullName']}</H3Wrapper>
       {/*<H3Wrapper>{`http://localhost:3222${data?.imageUrl}`}</H3Wrapper>*/}
 
-      <FooterWrapper>
-        <DivAuthorWrapper>
-          <img src={face} alt='avatar' width={'30px'} height={'30px'} />
-          <div>{/*<p>{dates.toISOString().substring(0, 10)}</p>*/}</div>
-        </DivAuthorWrapper>
-        <LinkWrapper to={`/posts/${data?._id}`}>Discover ➝</LinkWrapper>
-      </FooterWrapper>
+      {/*<FooterWrapper>*/}
+      {/*  <DivAuthorWrapper>*/}
+      {/*    <img src={face} alt='avatar' width={'30px'} height={'30px'} />*/}
+      {/*    <div>/!*<p>{dates.toISOString().substring(0, 10)}</p>*!/</div>*/}
+      {/*  </DivAuthorWrapper>*/}
+      <LinkWrapper to={`/posts/${data?._id}`}>Discover ➝</LinkWrapper>
+      {/*</FooterWrapper>*/}
     </Container>
   )
 }

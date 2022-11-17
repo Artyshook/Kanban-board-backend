@@ -1,4 +1,4 @@
-import { AddPostPage } from '../pages/AddPostPage'
+import { AddBlogUseContext } from '../pages/AddGoalContext/AddGoalContext'
 import { ArticlePage } from './ArticlePage'
 import { BlogHome } from '../pages/BlogHome'
 import { BlogUseContext } from '../pages/BlogContext'
@@ -17,7 +17,7 @@ export const BaseLayout = () => {
         <Routes>
           <Route path='/' element={<BlogUseContext />} />
           <Route path='/posts/:id' element={<ArticlePage />} />
-          <Route path='/new' element={<AddPostPage />} />
+          <Route path='/new' element={<AddBlogUseContext />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Registration />} />
         </Routes>
