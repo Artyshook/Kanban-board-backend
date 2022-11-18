@@ -1,5 +1,5 @@
 import { checkAuth } from "../controllers/authentication";
-import { postValidation } from "../helpers/validations";
+import { taskValidation } from "../helpers/validations";
 import {
   createTask,
   deleteTask,
@@ -9,12 +9,12 @@ import {
 } from "../controllers/TaskController";
 import { Router } from "express";
 
-const postRouter = Router();
+const taskRouter = Router();
 
-postRouter.post("/tasks", checkAuth, postValidation, createTask);
-postRouter.delete("/tasks/:id", checkAuth, deleteTask);
-postRouter.patch("/tasks/:id", checkAuth, postValidation, updateTask);
-postRouter.get("/tasks", getAllTasks);
-postRouter.get("/tasks/:id", getOneTask);
+taskRouter.post("/tasks", checkAuth, taskValidation, createTask);
+taskRouter.delete("/tasks/:id", checkAuth, deleteTask);
+taskRouter.patch("/tasks/:id", checkAuth, taskValidation, updateTask);
+taskRouter.get("/tasks", getAllTasks);
+taskRouter.get("/tasks/:id", getOneTask);
 
-export { postRouter };
+export { taskRouter };

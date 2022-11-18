@@ -1,54 +1,72 @@
 import { Request, Response } from "express";
 import TaskSchema from "../models/TaskModel";
+import List from "../models/ListModel";
+import Task from "../models/TaskModel";
 
 export const createTask = async (req: Request, res: Response) => {
   try {
-    console.log("here");
+    const listId = req.body.listId;
+    console.log("add task");
+
+    // Create and save the task
     const doc = new TaskSchema({
       title: req.body.title,
-      text: req.body.text,
-      imageUrl: req.body.imageUrl,
-      category: req.body.category,
-      user: req.user,
     });
     const task = await doc.save();
+
+    // Assign the task to the list
+    const list = await List.findById(listId);
+    list?.tasks.push(task.id);
+    await list?.save();
+
     res.json(task);
   } catch (err) {
     res.status(500).json({
-      message: `Post didn't created`,
+      message: `Task didn't created`,
     });
   }
 };
 
+// Get all of a list's tasks
 export const getAllTasks = async (req: Request, res: Response) => {
   try {
-    const tasks = await TaskSchema.find().populate("user").exec();
-    res.json(tasks);
+    const list = await List.findById(req.params.listId);
+    if (!list) {
+      return res.status(404).json({ msg: "List not found" });
+    }
+
+    const cards = [];
+    for (const cardId of list.tasks) {
+      cards.push(await List.findById(cardId));
+    }
+
+    res.json(cards);
   } catch (err) {
     res.status(500).json({
       message: `Couldn't find task`,
     });
   }
 };
+
+// Get a task by id
 export const getOneTask = async (req: Request, res: Response) => {
   try {
-    const taskId = req.params.id;
-    console.log("ssss");
+    const task = await Task.findById(req.params.id);
 
-    const oneTask = await TaskSchema.findById({ _id: taskId });
-    if (!oneTask) {
+    if (!task) {
       return res.status(404).json({
-        message: "Post not found",
+        message: "Task not found",
       });
     }
-    res.json(oneTask);
+    res.json(task);
   } catch (err) {
     res.status(500).json({
-      message: `Couldn't find post`,
+      message: `Server Error`,
     });
   }
 };
 
+//Delete task by id
 export const deleteTask = async (req: Request, res: Response) => {
   try {
     const taskId = req.params.id;
