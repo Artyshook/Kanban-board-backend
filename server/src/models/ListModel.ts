@@ -3,31 +3,26 @@ import { Schema } from "mongoose";
 
 interface IEvent {
   title: string;
-  cards: object;
+  tasks: any;
   archived: boolean;
 }
 
-const TaskSchema = new mongoose.Schema<IEvent>(
-  {
-    title: {
-      type: String,
-      required: true,
-    },
-    cards: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "cards",
-      },
-    ],
-    archived: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
+const ListSchema = new mongoose.Schema<IEvent>({
+  title: {
+    type: String,
+    required: true,
   },
-  {
-    timestamps: true,
-  }
-);
+  tasks: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "tasks",
+    },
+  ],
+  archived: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
+});
 
-export default mongoose.model("Task", TaskSchema);
+export default mongoose.model("List", ListSchema);

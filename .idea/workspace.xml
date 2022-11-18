@@ -2,44 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac623f6b-74c3-44f2-bf38-212b2fb59e74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/models/TaskModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ArticlePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ArticlePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/BaseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/BaseLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/helpers/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/functions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/helpers/service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AddPostPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/BlogContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/BlogContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/BlogHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/BlogHome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/BlogItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/BlogItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/controllers/PostController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/TaskController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/PostModel.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/UserModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/PostRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/TaskRoute.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/0602d930-577a-11ed-9b1f-6f2ff4c2e26a-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/065094b0-5f75-11ed-92d5-5d193b4a6b48-IMG_9348.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/2238a190-5b88-11ed-9cc8-93170766d3db-Olx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/24887ca0-5b96-11ed-96db-5fb75af02b4d-b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/25373890-56c7-11ed-a72d-e72ea31146f1-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/776e5c60-5b86-11ed-86ad-2114b0989fc8-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/8fb86460-5b9e-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/a58dd070-5b96-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/b8d34930-5b96-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/c5e2a3a0-5b96-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/cccd1dd0-5b96-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/cropped-IMG_9348.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/cropped-IMG_9711.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/d3c6b990-5b9e-11ed-96db-5fb75af02b4d-55f3dd1cb4e139f (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/d64cbca0-56c6-11ed-a72d-e72ea31146f1-Olx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/d6727440-5b80-11ed-86ad-2114b0989fc8-Amazon-Logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/e5545df0-5f74-11ed-8d34-d557339d0bbc-Green 01 (1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/upload/e86ed8f0-5b85-11ed-86ad-2114b0989fc8-55f3dd1cb4e139f (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/ListController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/ListController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/TaskController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/TaskController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/helpers/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/helpers/validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/ListModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/ListModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/TaskModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/TaskModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/ListRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/ListRoute.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/TaskRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/TaskRoute.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +103,7 @@
       <workItem from="1667906587808" duration="20360000" />
       <workItem from="1667997102934" duration="26489000" />
       <workItem from="1668181393772" duration="1859000" />
-      <workItem from="1668431541301" duration="14486000" />
+      <workItem from="1668431541301" duration="33363000" />
     </task>
     <servers />
   </component>

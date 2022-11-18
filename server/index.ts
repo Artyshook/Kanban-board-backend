@@ -1,11 +1,13 @@
 import express from "express";
 import * as mongoose from "mongoose";
 import cors from "cors";
-import { postRouter } from "./src/routes/TaskRoute";
+import { taskRouter } from "./src/routes/TaskRoute";
 import { userRouter } from "./src/routes/UserRoute";
 import { uploadRouter } from "./src/routes/UploadRoute";
 import swagger from "./swagger.json";
 import swaggerUi from "swagger-ui-express";
+import { boardRouter } from "./src/routes/BoardRoute";
+import { listRouter } from "./src/routes/ListRoute";
 
 const app = express();
 app.use(express.json());
@@ -23,8 +25,10 @@ mongoose
   .catch((err) => console.log("DB ERROR", err));
 
 app.use(userRouter);
-app.use(postRouter);
+app.use(taskRouter);
 app.use(uploadRouter);
+app.use(boardRouter);
+app.use(listRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);

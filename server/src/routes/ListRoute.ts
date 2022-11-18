@@ -1,20 +1,19 @@
 import { checkAuth } from "../controllers/authentication";
-import { postValidation } from "../helpers/validations";
+import { listValidation } from "../helpers/validations";
 import {
-  createTask,
-  deleteTask,
-  getAllTasks,
-  getOneTask,
-  updateTask,
-} from "../controllers/TaskController";
+  createList,
+  getAllLists,
+  getListById,
+  renameList,
+} from "../controllers/ListController";
 import { Router } from "express";
 
-const postRouter = Router();
+const listRouter = Router();
 
-postRouter.post("/list", checkAuth, postValidation, createTask);
-postRouter.delete("/list/:id", checkAuth, deleteTask);
-postRouter.patch("/list/:id", checkAuth, postValidation, updateTask);
-postRouter.get("/list", getAllTasks);
-postRouter.get("/list/:id", getOneTask);
+listRouter.post("/list", checkAuth, listValidation, createList);
+listRouter.patch("/list/:id", checkAuth, listValidation, renameList);
+listRouter.get("/boardLists/:boardId", checkAuth, getAllLists);
+listRouter.get("/list/:id", checkAuth, getListById);
+// postRouter.delete("/list/:id", checkAuth, deleteTask);
 
-export { postRouter };
+export { listRouter };
