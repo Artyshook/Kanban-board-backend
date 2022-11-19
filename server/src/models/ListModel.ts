@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { Schema } from "mongoose";
 
 interface IEvent {
   title: string;
@@ -14,7 +13,7 @@ const ListSchema = new mongoose.Schema<IEvent>({
   },
   tasks: [
     {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "tasks",
     },
   ],

@@ -1,16 +1,15 @@
 import * as mongoose from "mongoose";
-const { Schema } = require("mongoose");
+// const { Schema } = require("mongoose");
 
 interface MongoResult {
   _doc: any;
 }
 interface IEvent extends MongoResult {
-  _id: any;
   fullName: string;
   email: string;
   passwordHash: string;
   avatarUrl: string;
-  boards: any;
+  boards: any[];
 }
 
 const UserSchema = new mongoose.Schema<IEvent>(
@@ -31,14 +30,16 @@ const UserSchema = new mongoose.Schema<IEvent>(
     avatarUrl: {
       type: "String",
     },
-    boards: {
-      type: Schema.Types.ObjectId,
-      ref: "boards",
-    },
+    boards: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "boards",
+      },
+    ],
   },
   {
     timestamps: true,
   }
 );
 
-export default mongoose.model("User", UserSchema);
+export default mongoose.model<IEvent>("User", UserSchema);

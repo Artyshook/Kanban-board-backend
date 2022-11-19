@@ -3,15 +3,10 @@ import ListSchema from "../models/ListModel";
 import Board from "../models/BoardModel";
 import List from "../models/ListModel";
 
-// const User = require("../models/UserModel");
-// const Board = require("../models/BoardModel");
-// const List = require("../models/ListModel");
-
 // Add a list
 export const createList = async (req: Request, res: Response) => {
   try {
-    console.log("ddd");
-    const boardId = req.header("boardId");
+    const boardId = req.body.boardId;
 
     // Create and save the list
     const doc = new ListSchema({
@@ -22,12 +17,9 @@ export const createList = async (req: Request, res: Response) => {
     // Assign the list to the board
     const board = await Board.findById(boardId);
     board?.lists.push(list.id);
+    await board?.save();
 
-    res.json(list);
-
-    // // Assign the list to the user
-    // const board = await User.findById();
-    // board.lists.push(list.id);
+    res.json({ listId: list.id, boardId });
   } catch (err) {
     res.status(500).json({
       message: `Server Error`,
@@ -37,6 +29,7 @@ export const createList = async (req: Request, res: Response) => {
 
 // Get all of a board's lists
 export const getAllLists = async (req: Request, res: Response) => {
+  console.log("board id:", req.params.boardId);
   try {
     const board = await Board.findById(req.params.boardId);
     if (!board) {

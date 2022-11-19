@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { Schema } from "mongoose";
 
 interface IEvent {
   _id: any;
@@ -22,7 +21,6 @@ const TaskSchema = new mongoose.Schema<IEvent>(
     },
     description: {
       type: String,
-      required: true,
     },
     label: {
       type: String,

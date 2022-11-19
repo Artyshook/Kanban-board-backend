@@ -38,23 +38,23 @@ const BoardSchema = new mongoose.Schema<IEvent>(
     backgroundURL: {
       type: String,
     },
-    members: [
-      {
-        _id: false,
-        user: {
-          type: Schema.Types.ObjectId,
-          ref: "users",
-        },
-        name: {
-          type: String,
-          // required: true,
-        },
-        role: {
-          type: String,
-          default: "admin",
-        },
-      },
-    ],
+    // members: [
+    //   {
+    //     _id: false,
+    //     user: {
+    //       type: Schema.Types.ObjectId,
+    //       ref: "users",
+    //     },
+    //     name: {
+    //       type: String,
+    //       // required: true,
+    //     },
+    //     role: {
+    //       type: String,
+    //       default: "admin",
+    //     },
+    //   },
+    // ],
   },
   {
     timestamps: true,
