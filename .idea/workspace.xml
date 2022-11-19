@@ -3,15 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ac623f6b-74c3-44f2-bf38-212b2fb59e74" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/controllers/BoardController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/BoardController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/controllers/ListController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/ListController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/controllers/TaskController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/TaskController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/helpers/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/helpers/validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/BoardModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/BoardModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/models/ListModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/ListModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/models/TaskModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/TaskModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/ListRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/ListRoute.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/UserModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/routes/TaskRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/TaskRoute.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/types/express/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/types/express/index.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +29,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/server/node_modules/@types/express-serve-static-core/index.d.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -103,7 +107,7 @@
       <workItem from="1667906587808" duration="20360000" />
       <workItem from="1667997102934" duration="26489000" />
       <workItem from="1668181393772" duration="1859000" />
-      <workItem from="1668431541301" duration="33363000" />
+      <workItem from="1668431541301" duration="44405000" />
     </task>
     <servers />
   </component>

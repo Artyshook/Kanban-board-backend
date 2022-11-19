@@ -6,20 +6,22 @@ import Task from "../models/TaskModel";
 export const createTask = async (req: Request, res: Response) => {
   try {
     const listId = req.body.listId;
-    console.log("add task");
+    console.log(listId);
 
     // Create and save the task
     const doc = new TaskSchema({
       title: req.body.title,
+      user: req.user,
     });
     const task = await doc.save();
 
-    // Assign the task to the list
+    //Assign the task to the list
     const list = await List.findById(listId);
     list?.tasks.push(task.id);
     await list?.save();
 
-    res.json(task);
+    res.json({ taskId: task.id, listId });
+    // res.json(task);
   } catch (err) {
     res.status(500).json({
       message: `Task didn't created`,
@@ -30,17 +32,18 @@ export const createTask = async (req: Request, res: Response) => {
 // Get all of a list's tasks
 export const getAllTasks = async (req: Request, res: Response) => {
   try {
-    const list = await List.findById(req.params.listId);
+    console.log("list id:", req.params.listId);
+    const list = await List.findById(req.params.listId); //fix???
     if (!list) {
       return res.status(404).json({ msg: "List not found" });
     }
 
-    const cards = [];
-    for (const cardId of list.tasks) {
-      cards.push(await List.findById(cardId));
+    const tasks = [];
+    for (const taskId of list.tasks) {
+      tasks.push(await Task.findById(taskId));
     }
 
-    res.json(cards);
+    res.json(tasks);
   } catch (err) {
     res.status(500).json({
       message: `Couldn't find task`,
@@ -48,7 +51,7 @@ export const getAllTasks = async (req: Request, res: Response) => {
   }
 };
 
-// Get a task by id
+// Get task by id
 export const getOneTask = async (req: Request, res: Response) => {
   try {
     const task = await Task.findById(req.params.id);
