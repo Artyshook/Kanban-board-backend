@@ -32,7 +32,8 @@ export const createTask = async (req: Request, res: Response) => {
 // Get all of a list's tasks
 export const getAllTasks = async (req: Request, res: Response) => {
   try {
-    console.log("list id:", req.params.listId);
+    console.log(req.params);
+
     const list = await List.findById(req.params.listId); //fix???
     if (!list) {
       return res.status(404).json({ msg: "List not found" });

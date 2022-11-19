@@ -9,7 +9,7 @@ interface IEvent extends MongoResult {
   email: string;
   passwordHash: string;
   avatarUrl: string;
-  boards: any;
+  boards: any[];
 }
 
 const UserSchema = new mongoose.Schema<IEvent>(
@@ -42,4 +42,4 @@ const UserSchema = new mongoose.Schema<IEvent>(
   }
 );
 
-export default mongoose.model("User", UserSchema);
+export default mongoose.model<IEvent>("User", UserSchema);
