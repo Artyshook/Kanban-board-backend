@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Status = () => {
+export const Board = () => {
   return (
     <div>
       <div></div>

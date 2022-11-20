@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Priority = () => {
+export const DashBoard = () => {
   return (
     <div>
       <div></div>
