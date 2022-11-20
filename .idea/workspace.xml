@@ -3,10 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="ac623f6b-74c3-44f2-bf38-212b2fb59e74" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/BaseLayout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friday/AvatarDisplay.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friday/DeleteBlock.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friday/Layouts.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friday/NavBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friday/Priority.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friday/Progress.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friday/Status.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Friday/TaskCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/AddGoalContext/AddGoal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/AddGoalContext/AddGoalContext.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/FridayPages/DashBoard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/FridayPages/TaskPage.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/controllers/BoardController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/BoardController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/controllers/TaskController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/TaskController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/UserModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/ListRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/ListRoute.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -101,7 +113,7 @@
       <workItem from="1667906587808" duration="20360000" />
       <workItem from="1667997102934" duration="26489000" />
       <workItem from="1668181393772" duration="1859000" />
-      <workItem from="1668431541301" duration="47789000" />
+      <workItem from="1668431541301" duration="52506000" />
     </task>
     <servers />
   </component>

@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import BoardSchema from "../models/BoardModel";
 import User from "../models/UserModel";
 import Board from "../models/BoardModel";
-// const Board = require("../models/BoardModel");
 
 // Add a board
 export const createBoard = async (req: Request, res: Response) => {
@@ -16,15 +15,11 @@ export const createBoard = async (req: Request, res: Response) => {
     const board = await doc.save();
 
     // Add board to user's boards
-    const user = await User.findById(req.user._id); // fix???
+    const user = await User.findById(req.user._id);
     if (user) {
       user.boards = [board.id, ...user.boards];
       await user.save();
     }
-    // user.boards = [board.id, ...user.bords];
-    // user.boards.unshift(board.id);
-    // await user.save();
-
     res.json(board);
   } catch (err) {
     console.log(err);
@@ -37,8 +32,8 @@ export const createBoard = async (req: Request, res: Response) => {
 // Get user's boards after log in
 export const getUserBoard = async (req: Request, res: Response) => {
   try {
-    const user = await User.findById(req.user.id);
-    console.log(user);
+    console.log(req.user.id);
+    const user = await User.findById(req.user._id);
     const boards = [];
 
     for (const boardId of user!.boards) {
